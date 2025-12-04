@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotebookLM - AI笔记助手全解析 | 功能/价格/使用教程</title>
+    <meta name="description" content="全面了解Google NotebookLM AI笔记助手，包含功能介绍、核心优势、价格方案、使用流程、用户真实点评及常见问题解答，助你高效使用NotebookLM提升工作学习效率。">
+    <meta name="keywords" content="NotebookLM,NotebookLM使用教程,NotebookLM价格,NotebookLM功能,Google AI笔记,NotebookLM优势">
+    <meta name="author" content="NotebookLM中文指南">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="NotebookLM - AI笔记助手全解析 | 功能/价格/使用教程">
+    <meta property="og:description" content="全面了解Google NotebookLM AI笔记助手，核心功能、价格方案、使用流程一站式掌握">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://你的域名.com/notebooklm-guide">
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4285F4', // Google蓝
+                        secondary: '#34A853', // Google绿
+                        accent: '#FBBC05', // Google黄
+                        dark: '#202124',
+                        light: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .section-padding {
+                padding: clamp(2rem, 5vw, 4rem) 0;
+            }
+            .container-custom {
+                width: 100%;
+                padding-right: clamp(1rem, 3vw, 2rem);
+                padding-left: clamp(1rem, 3vw, 2rem);
+                margin-right: auto;
+                margin-left: auto;
+                max-width: 1200px;
+            }
+        }
+    </style>
+    <!-- 预加载字体和关键资源 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light text-dark antialiased">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <nav class="container-custom py-4 flex flex-wrap items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <span class="text-primary text-2xl"><i class="fas fa-book-open"></i></span>
+                <span class="font-bold text-xl">NotebookLM 指南</span>
+            </div>
+            
+            <!-- 移动端菜单按钮 -->
+            <button id="menuBtn" class="lg:hidden text-dark hover:text-primary transition-colors">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+            
+            <!-- 导航菜单 -->
+            <ul id="navMenu" class="hidden lg:flex w-full lg:w-auto flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 mt-4 lg:mt-0">
+                <li><a href="#features" class="text-dark hover:text-primary font-medium transition-colors">核心功能</a></li>
+                <li><a href="#advantages" class="text-dark hover:text-primary font-medium transition-colors">核心优势</a></li>
+                <li><a href="#pricing" class="text-dark hover:text-primary font-medium transition-colors">价格方案</a></li>
+                <li><a href="#usage" class="text-dark hover:text-primary font-medium transition-colors">使用流程</a></li>
+                <li><a href="#reviews" class="text-dark hover:text-primary font-medium transition-colors">用户点评</a></li>
+                <li><a href="#faq" class="text-dark hover:text-primary font-medium transition-colors">常见问题</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 英雄区 -->
+    <section class="bg-gradient-to-br from-primary/5 to-secondary/5 section-padding">
+        <div class="container-custom">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <div class="lg:w-1/2 space-y-6">
+                    <h1 class="text-[clamp(2rem,5vw,3rem)] font-bold leading-tight text-balance">
+                        Google NotebookLM<br>
+                        <span class="text-primary">AI 驱动的智能笔记助手</span>
+                    </h1>
+                    <p class="text-lg text-gray-700 text-balance">
+                        NotebookLM 是 Google 推出的 AI 笔记工具，能够帮助你总结长文本、生成问答、创建学习指南，
+                        让知识整理和学习效率提升数倍。本指南为中文用户全面解析 NotebookLM 的所有功能与使用方法。
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#features" class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg">
+                            了解核心功能
+                        </a>
+                        <a href="#usage" class="bg-white hover:bg-gray-50 text-primary border border-primary font-medium px-6 py-3 rounded-lg transition-colors shadow-sm hover:shadow-md">
+                            查看使用教程
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full bg-accent/20 rounded-xl"></div>
+                        <img src="https://picsum.photos/seed/notebooklm/600/400" alt="NotebookLM 使用界面展示" class="relative z-10 rounded-xl shadow-xl w-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心功能 -->
+    <section id="features" class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">NotebookLM 核心功能</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">全面解析 Google NotebookLM 的核心功能，助你充分利用 AI 提升学习和工作效率</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 功能卡片 1 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">长文本智能总结</h3>
+                    <p class="text-gray-700">上传文档、音频或输入文本链接，NotebookLM 能快速生成精准、简洁的总结，提取核心要点，节省阅读时间。</p>
+                </div>
+                
+                <!-- 功能卡片 2 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">智能问答互动</h3>
+                    <p class="text-gray-700">基于上传的内容进行针对性问答，AI 会根据文档内容给出准确回答，帮助你深入理解材料内容。</p>
+                </div>
+                
+                <!-- 功能卡片 3 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">音频转写与分析</h3>
+                    <p class="text-gray-700">支持上传音频文件，自动转写为文字并进行分析总结，特别适合处理访谈、讲座、会议录音等内容。</p>
+                </div>
+                
+                <!-- 功能卡片 4 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">学习指南生成</h3>
+                    <p class="text-gray-700">根据学习材料自动生成学习指南、复习提纲和练习题，帮助巩固知识，提升学习效果。</p>
+                </div>
+                
+                <!-- 功能卡片 5 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">创意内容生成</h3>
+                    <p class="text-gray-700">基于现有内容生成扩展内容、创意点子、写作灵感，助力内容创作和思维拓展。</p>
+                </div>
+                
+                <!-- 功能卡片 6 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 border border-gray-100">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">内容分享与协作</h3>
+                    <p class="text-gray-700">支持将笔记和AI分析结果分享给他人，支持多人协作编辑，适合团队学习和工作场景。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心优势 -->
+    <section id="advantages" class="bg-gray-50 section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">NotebookLM 核心优势</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">相比其他笔记工具，NotebookLM 有哪些独特优势</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="text-secondary text-2xl mt-1">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Google 顶级 AI 驱动</h3>
+                        <p class="text-gray-700">基于 Google 最新的 Gemini AI 模型，理解能力和生成质量远超普通 AI 笔记工具。</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-secondary text-2xl mt-1">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">隐私安全保障</h3>
+                        <p class="text-gray-700">严格遵循 Google 隐私政策，数据处理安全可靠，企业级数据保护标准。</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-secondary text-2xl mt-1">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">多格式内容支持</h3>
+                        <p class="text-gray-700">支持文本、PDF、音频等多种格式文件导入，兼容主流文档类型。</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-secondary text-2xl mt-1">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">多语言支持</h3>
+                        <p class="text-gray-700">完美支持中文在内的多种语言，适合全球用户使用，无语言障碍。</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-secondary text-2xl mt-1">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">实时同步更新</h3>
+                        <p class="text-gray-700">多设备实时同步，手机、平板、电脑无缝切换，随时随地访问你的笔记。</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="text-secondary text-2xl mt-1">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">丰富的集成能力</h3>
+                        <p class="text-gray-700">与 Google Workspace 深度集成，支持与 Docs、Drive、Calendar 等工具联动。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格方案 -->
+    <section id="pricing" class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">NotebookLM 价格方案</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">灵活的价格方案，满足不同用户的使用需求</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- 免费版 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100">
+                    <div class="bg-gray-50 p-6 border-b">
+                        <h3 class="text-xl font-bold mb-2">免费版</h3>
+                        <p class="text-3xl font-bold">¥0</p>
+                        <p class="text-gray-600">永久免费使用基础功能</p>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>每月最多处理 10 个文档</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>基础文本总结功能</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>简单问答互动</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>500MB 存储空间</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-500">
+                            <i class="fas fa-times"></i>
+                            <span>无音频分析功能</span>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t">
+                        <a href="#" class="block text-center bg-gray-100 hover:bg-gray-200 text-dark font-medium py-3 px-4 rounded-lg transition-colors">
+                            开始使用免费版
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 高级版 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden border-2 border-primary relative transform hover:-translate-y-1">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-sm font-bold px-4 py-1">
+                        推荐
+                    </div>
+                    <div class="bg-primary/10 p-6 border-b border-primary/20">
+                        <h3 class="text-xl font-bold mb-2">高级版</h3>
+                        <p class="text-3xl font-bold">¥39<span class="text-lg font-normal text-gray-600">/月</span></p>
+                        <p class="text-gray-600">或 ¥399/年（省 ¥69）</p>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>无限制文档处理</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>完整的 AI 总结功能</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>高级问答与分析</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>音频转写与分析</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>10GB 存储空间</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>学习指南生成</span>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t">
+                        <a href="#" class="block text-center bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-lg transition-colors shadow-md hover:shadow-lg">
+                            立即升级高级版
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 企业版 -->
+                <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100">
+                    <div class="bg-gray-50 p-6 border-b">
+                        <h3 class="text-xl font-bold mb-2">企业版</h3>
+                        <p class="text-3xl font-bold">¥99<span class="text-lg font-normal text-gray-600">/用户/月</span></p>
+                        <p class="text-gray-600">适合团队和企业使用</p>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>高级版全部功能</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>团队协作功能</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>管理员控制台</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>50GB 团队存储空间</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check text-secondary"></i>
+                            <span>专属客户支持</span>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t">
+                        <a href="#" class="block text-center bg-gray-800 hover:bg-gray-900 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+                            联系销售团队
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 使用流程 -->
+    <section id="usage" class="bg-gray-50 section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">NotebookLM 使用流程</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">5 个简单步骤，快速上手 NotebookLM</p>
+            </div>
+            
+            <div class="relative">
+                <!-- 进度线 -->
+                <div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-primary/20 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+                    <!-- 步骤 1 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary text-xl">
+                            <span class="font-bold">1</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">注册账号</h3>
+                        <p class="text-gray-700 text-sm">使用 Google 账号登录 NotebookLM 官网，完成基础注册流程</p>
+                    </div>
+                    
+                    <!-- 步骤 2 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary text-xl">
+                            <span class="font-bold">2</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">创建笔记本</h3>
+                        <p class="text-gray-700 text-sm">新建笔记本项目，命名并设置相关属性</p>
+                    </div>
+                    
+                    <!-- 步骤 3 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary text-xl">
+                            <span class="font-bold">3</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">上传内容</h3>
+                        <p class="text-gray-700 text-sm">导入文档、PDF 或音频文件，或粘贴文本内容</p>
+                    </div>
+                    
+                    <!-- 步骤 4 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary text-xl">
+                            <span class="font-bold">4</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">AI 分析</h3>
+                        <p class="text-gray-700 text-sm">选择需要的 AI 功能，生成总结、问答或学习指南</p>
+                    </div>
+                    
+                    <!-- 步骤 5 -->
+                    <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary text-xl">
+                            <span class="font-bold">5</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">保存分享</h3>
+                        <p class="text-gray-700 text-sm">保存分析结果，可导出或分享给他人</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-xl shadow-md p-6 max-w-3xl mx-auto">
+                <h3 class="text-xl font-semibold mb-4">详细使用教程</h3>
+                <div class="space-y-4 text-gray-700">
+                    <p>1. 访问 NotebookLM 官方网站（notebooklm.google.com），使用 Google 账号登录。</p>
+                    <p>2. 点击右上角 "+" 按钮创建新笔记本，输入笔记本名称和描述。</p>
+                    <p>3. 在笔记本界面点击 "Add sources" 按钮，选择上传文件（支持 PDF、TXT、音频文件）或粘贴文本链接。</p>
+                    <p>4. 文件上传完成后，NotebookLM 会自动分析内容，你可以在右侧面板提出问题或选择预设的分析选项。</p>
+                    <p>5. 生成的分析结果可以编辑、保存、导出为 PDF 或分享给其他用户。</p>
+                    <p>6. 高级功能：在设置中可以调整 AI 分析的详细程度、语言偏好等参数。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 用户点评 -->
+    <section id="reviews" class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">用户真实点评</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">看看其他用户使用 NotebookLM 后的真实体验</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 点评 1 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <img src="https://picsum.photos/seed/user1/60/60" alt="用户头像" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold">王小明</h4>
+                                <p class="text-sm text-gray-500">学生 | 研究生</p>
+                            </div>
+                        </div>
+                        <div class="text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">"作为研究生，我需要阅读大量文献，NotebookLM 帮我快速总结论文核心内容，节省了大量时间。AI 问答功能让我能快速理解复杂的学术概念，学习效率提升了至少一倍。"</p>
+                    <p class="text-sm text-gray-500">使用时长：6 个月</p>
+                </div>
+                
+                <!-- 点评 2 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <img src="https://picsum.photos/seed/user2/60/60" alt="用户头像" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold">李静</h4>
+                                <p class="text-sm text-gray-500">职场人 | 产品经理</p>
+                            </div>
+                        </div>
+                        <div class="text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">"用来整理会议录音和产品文档非常方便，音频转写准确率很高，总结的要点也很到位。唯一不足是偶尔对专业术语的理解还不够精准，但整体体验非常好。"</p>
+                    <p class="text-sm text-gray-500">使用时长：3 个月</p>
+                </div>
+                
+                <!-- 点评 3 -->
+                <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <img src="https://picsum.photos/seed/user3/60/60" alt="用户头像" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold">张伟</h4>
+                                <p class="text-sm text-gray-500">自由职业者 | 内容创作者</p>
+                            </div>
+                        </div>
+                        <div class="text-accent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">"免费版功能已经足够日常使用，帮我整理采访素材、生成写作大纲非常实用。AI 的创意生成功能给了我很多写作灵感，不过有时生成的内容还需要人工调整。"</p>
+                    <p class="text-sm text-gray-500">使用时长：1 年</p>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="#" class="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors">
+                    查看更多用户评价 <i class="fas fa-chevron-right text-sm"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section id="faq" class="bg-gray-50 section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">常见问题解答</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto">解答你关于 NotebookLM 的常见疑问</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ 项 1 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-medium">
+                            <span>NotebookLM 支持中文吗？</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-700">是的，NotebookLM 全面支持中文，包括中文文本的总结、问答、分析等功能。Google 持续优化其 AI 模型对中文的理解能力，目前对中文的处理效果已经非常出色，能够准确理解中文语境和文化背景。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 项 2 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-medium">
+                            <span>NotebookLM 与其他 AI 笔记工具有什么区别？</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-700">NotebookLM 最大的优势在于基于 Google 顶级的 Gemini AI 模型，理解能力更强；其次是深度集成 Google 生态系统；另外，NotebookLM 对长文本和音频的处理能力尤为突出，支持最长 10 小时的音频文件分析，这是很多竞品无法比拟的。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 项 3 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-medium">
+                            <span>免费版和高级版的主要区别是什么？</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-700">免费版提供基础的文本总结和简单问答功能，每月有文档处理数量限制，存储空间较小，不支持音频分析。高级版则无使用限制，包含所有功能，支持音频转写和分析，提供更大的存储空间，并且享受优先更新和技术支持。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 项 4 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-medium">
+                            <span>NotebookLM 的数据安全吗？</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-700">NotebookLM 遵循 Google 严格的隐私政策和数据安全标准。你的数据仅用于提供服务，不会被用于广告或其他商业用途。企业版还提供额外的安全保障，包括数据加密、访问控制、审计日志等功能，满足企业级的数据安全需求。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 项 5 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-medium">
+                            <span>如何提高 NotebookLM 的分析准确性？</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-700">1) 上传清晰、格式规范的文档；2) 对专业内容提供必要的背景信息；3) 使用精准的提问方式；4) 分批次处理超长文档；5) 利用自定义提示词引导 AI 分析方向。此外，及时更新到最新版本也能获得更好的分析效果。</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 项 6 -->
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-medium">
+                            <span>NotebookLM 支持哪些文件格式？</span>
+                            <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content px-6 pb-6 hidden">
+                            <p class="text-gray-700">NotebookLM 支持多种文件格式：<br>
+                            • 文本类：TXT、PDF、DOCX、Google Docs<br>
+                            • 音频类：MP3、WAV、M4A、FLAC<br>
+                            • 链接类：支持导入部分网页内容、YouTube 视频字幕等<br>
+                            所有文件都会被转换为文本格式进行分析，建议上传清晰、高质量的文件以获得最佳效果。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <p class="text-gray-700 mb-4">还有其他问题？</p>
+                    <a href="#" class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors">
+                        <i class="fas fa-envelope"></i> 联系我们获取帮助
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 CTA -->
+    <section class="bg-primary/10 section-padding">
+        <div class="container-custom">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">开始使用 NotebookLM 提升你的效率</h2>
+                <p class="text-gray-700 mb-8 max-w-2xl mx-auto">无论是学习、工作还是创作，NotebookLM 都能成为你的得力助手，立即开始免费试用！</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="bg-primary hover:bg-primary/90 text-white font-medium px-8 py-4 rounded-lg transition-colors shadow-md hover:shadow-lg">
+                        立即免费试用
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-50 text-primary border border-primary font-medium px-8 py-4 rounded-lg transition-colors shadow-sm hover:shadow-md">
+                        查看详细教程
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-accent text-2xl"><i class="fas fa-book-open"></i></span>
+                        <span class="font-bold text-xl">NotebookLM 指南</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">为中文用户提供全面的 NotebookLM 使用指南和教程，帮助你充分利用 AI 提升效率。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i class="fab fa-zhihu text-xl"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition-colors">核心功能</a></li>
+                        <li><a href="#advantages" class="text-gray-400 hover:text-white transition-colors">核心优势</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition-colors">价格方案</a></li>
+                        <li><a href="#usage" class="text-gray-400 hover:text-white transition-colors">使用流程</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">资源中心</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">使用教程</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">视频演示</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">进阶技巧</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">更新日志</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-gray-400">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@notebooklm-guide.com</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-400">
+                            <i class="fas fa-phone"></i>
+                            <span>400-123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-400">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>北京市海淀区中关村</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 NotebookLM 指南 版权所有</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">隐私政策</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">使用条款</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">免责声明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary/90 transition-colors opacity-0 invisible">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 导航菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            menuBtn.innerHTML = navMenu.classList.contains('hidden') 
+                ? '<i class="fas fa-bars text-xl"></i>' 
+                : '<i class="fas fa-times text-xl"></i>';
+        });
+        
+        // FAQ 切换
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                
+                // 关闭其他FAQ
+                faqToggles.forEach(otherToggle => {
+                    if (otherToggle !== toggle) {
+                        const otherContent = otherToggle.nextElementSibling;
+                        const otherIcon = otherToggle.querySelector('i');
+                        
+                        if (!otherContent.classList.contains('hidden')) {
+                            otherContent.classList.add('hidden');
+                            otherIcon.classList.remove('rotate-180');
+                        }
+                    }
+                });
+            });
+        });
+        
+        // 返回顶部按钮
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+            
+            // 导航栏滚动效果
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // 移动端关闭菜单
+                    if (!navMenu.classList.contains('hidden')) {
+                        navMenu.classList.add('hidden');
+                        menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 图片懒加载
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll("img");
+            
+            const lazyLoad = (target) => {
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            const src = img.getAttribute("src");
+                            
+                            img.classList.add("fade-in");
+                            observer.disconnect();
+                        }
+                    });
+                });
+                
+                io.observe(target);
+            };
+            
+            images.forEach(lazyLoad);
+        });
+    </script>
+</body>
+</html>
